@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard - Proyecto 01</title>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+        <!-- Estilos -->
+        <link rel="stylesheet" href="../css/style.css">
+
+    </head>
+
+    <body class="fondo-lineas">
+
+        <div class="container mt-3 mb-2">
+            <div class="dashboard-item fondo-blanco-oscuro d-flex flex-row align-items-center">
+                <h1 id="headerSalesPerson" class="letra-gris-oscuro mb-0 d-inline-block flex-grow-1"></h1>
+                <button class="btn btn-outline-dark btn-lg rounded-0" onclick="document.location='index.html'">Regresar</button>
+            </div>
+        </div>
+
+        <div class="mb-5">
+            <div class="container sales-dashboard">
+
+                <div class="dashboard-item cumplimiento-ventas">
+
+                    <span class="dashboard-title">Cumplimiento de Ventas</span>
+
+                    <div class="cumplimiento-ventas-header">
+                        <div>
+                            <span class="dashboard-subtitle text-center">Venta Actual</span>
+                            <span id="spanVentaActual" class="dashboard-value text-center letra-verde"></span>
+                        </div>
+                        <div>
+                            <span class="dashboard-subtitle text-center">Meta Actual</span>
+                            <span id="spanMetaActual" class="dashboard-value text-center letra-gris"></span>
+                        </div>
+                        <div>
+                            <span class="dashboard-subtitle text-center">Diferencia</span>
+                            <span id="spanDiferencia" class="dashboard-value text-center letra-rosada"></span>
+                        </div>
+                    </div>
+
+                    <div id="salesChart"></div>
+
+                </div>
+
+                <div class="dashboard-item cumplimiento fondo-circulos-blanco">
+
+                    <div class="d-flex flex-row align-items-baseline">
+                        <span class="dashboard-title d-inline-block flex-grow-1">Cumplimiento</span>
+                    </div>
+
+                    <div id="accomplishedChart"></div>
+
+                </div>
+
+                <div class="dashboard-item proyectado fondo-circulos-rosado">
+
+                    <div class="d-flex flex-row align-items-baseline">
+                        <span class="dashboard-title d-inline-block flex-grow-1 text-light">Proyectado</span>
+                        <span id="spanProyectado" class="dashboard-subtitle-small d-inline-block text-light"></span>
+                    </div>
+
+                    <div id="proyectedChart"></div>
+
+                </div>
+
+                <div class="dashboard-item pedidos-abiertos">
+
+                    <div class="d-flex flex-row align-items-stretch">
+                        <div class="flex-grow-1">
+                            <span class="dashboard-subtitle">Pedidos Abiertos</span>
+                            <span id="spanPedidosAbiertos" class="dashboard-value"></span>
+                        </div>
+                        <div class="">
+                            <img class="bi" width="70px" height="70px" src="../images/papel.svg" alt="Papel">
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="dashboard-item cotizaciones-abiertas">
+
+                    <div class="d-flex flex-row align-items-stretch">
+                        <div class="flex-grow-1">
+                            <span class="dashboard-subtitle">Cotizaciones Abiertas</span>
+                            <span id="spanCotizacionesAbiertas" class="dashboard-value"></span>
+                        </div>
+                        <div class="">
+                            <img class="bi" width="70px" height="70px" src="../images/carrito.svg" alt="Carrito">
+                        </div>
+                    </div>
+                                    
+                </div>
+
+                <div class="dashboard-item acumulado-anual">
+
+                    <span class="dashboard-title text-center">Acumulado Anual</span>
+
+                    <div class="d-flex flex-row align-items-stretch">
+                        <div class="border-end border-1 flex-grow-1">
+                            <span class="dashboard-subtitle text-center">Venta</span>
+                            <span id="spanAcumuladoAnualVenta" class="dashboard-value text-center"></span>
+                            <span id="spanAcumuladoAnualVentaSubtitulo" class="dashboard-subtitle-small text-center"></span>
+                        </div>
+
+                        <div class="border-start border-1 flex-grow-1">
+                            <span class="dashboard-subtitle text-center">Cumplimiento</span>
+                            <span id="spanAcumuladoAnualCumplimiento" class="dashboard-value text-center"></span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="dashboard-item ventas-devoluciones">
+
+                    <span class="dashboard-title text-center">Ventas vs. Devoluciones</span>
+
+                    <div class="d-flex flex-row align-items-stretch">
+                        <div class="border-end border-1 flex-grow-1">
+                            <span class="dashboard-subtitle-smaller text-center">⠀</span>
+                            <span id="spanFacturacion" class="dashboard-value text-center"></span>
+                            <span class="dashboard-subtitle-small text-center">Facturación</span>
+                        </div>
+
+                        <div class="border-start border-1 flex-grow-1">
+                            <span id="spanDevolucionesSubtitulo" class="dashboard-subtitle-smaller text-center"></span>
+                            <span id="spanDevoluciones" class="dashboard-value text-center"></span>
+                            <span class="dashboard-subtitle-small text-center">Devoluciones</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <footer class="container mt-auto">
+            <p class="text-center text-body-secondary">Copyright © 2024</p>
+        </footer>
+
+    </body>
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- ApexCharts -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <!-- Código -->
+    <script src="../js/dashboard.js"></script>
+
+</html>

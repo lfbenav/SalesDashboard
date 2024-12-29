@@ -6,10 +6,10 @@
     2023072689
 -->
 
-
 <html lang="en">
 
     <head>
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Vendedores - Proyecto 01</title>
@@ -20,26 +20,41 @@
         <!-- DataTables -->
         <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css" />
 
+        <!-- Estilos -->
+        <link rel="stylesheet" href="../css/style.css">
+
     </head>
 
-    <body>
+    <body class="fondo-lineas">
 
-        <div class="container table-responsive">
-            <table id="tableSalesPeople" class="display table nowrap table-striped table-bordered scroll-horizontal">
-                <thead>
-                    <tr>
-                        <th class="text-center">Vendedor</th>
-                        <th class="text-center">Venta</th>
-                        <th class="text-center">Meta</th>
-                        <th class="text-center">Diferencia</th>
-                        <th class="text-center">% Cumplimiento</th>
-                        <th class="text-center">Acciones</th>
-                    </tr>
-                </thead>
-                <tbody id="tableBodySalesPeople">
-                    <!-- Se rellena dinamicamente en js -->
-                </tbody>
-            </table>
+        <div class="container mt-3 mb-2">
+            <div class="dashboard-item fondo-blanco-oscuro">
+                <h1 class="text-center letra-gris-oscuro mb-0">Vendedores</h1>
+            </div>
+        </div>
+
+        <div class="mb-5">
+            <div class="container table-responsive">
+                <div class="dashboard-item fondo-circulos-verde">
+
+                    <table id="tableSalesPeople" class="display table nowrap table-striped table-bordered scroll-horizontal">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Vendedor</th>
+                                <th class="text-center">Venta</th>
+                                <th class="text-center">Meta</th>
+                                <th class="text-center">Diferencia</th>
+                                <th class="text-center">% Cumplimiento</th>
+                                <th class="text-center">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBodySalesPeople">
+                            <!-- Se rellena dinamicamente en js -->
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
         </div>
 
     </body>

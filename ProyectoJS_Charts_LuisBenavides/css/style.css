@@ -1,0 +1,135 @@
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.letra-rosada {
+    color: rgb(212, 28, 105);
+}
+
+.letra-verde {
+    color: rgb(28, 212, 151);
+}
+
+.letra-gris {
+    color: gray;
+}
+
+.letra-gris-oscuro {
+    color: rgb(65, 72, 72);
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+.fondo-lineas {
+    background-color: #f0f0f0;
+    background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.396) 7px, transparent 2px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.396) 7px, transparent 0.5px);
+    background-size: calc(100vw / 10) calc(100vw / 10);
+}
+
+.fondo-circulos-rosado {
+    background-color: rgb(212, 28, 105) !important;
+    background-image: 
+        radial-gradient(circle, rgba(255, 255, 255, 0.111) 20px, transparent 0px) !important;
+    background-size: 63px 63px !important; /* Ajusta el tamaño de los círculos */
+}
+
+.fondo-circulos-blanco {
+    background-color: rgb(245, 245, 245) !important;
+    background-image: 
+        radial-gradient(circle, rgb(255, 255, 255) 20px, transparent 0px) !important;
+    background-size: 63px 63px !important; /* Ajusta el tamaño de los círculos */
+}
+
+.fondo-circulos-verde {
+    background-color: rgb(245, 245, 245) !important;
+    background-image: 
+        radial-gradient(circle, rgba(28, 212, 151, 0.185) 20px, transparent 0px) !important;
+    background-size: 61.6px 61.6px !important; /* Ajusta el tamaño de los círculos */
+}
+
+.fondo-blanco-oscuro {
+    background-color: rgb(245, 245, 245) !important;
+}
+
+.sales-dashboard {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.dashboard-item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.dashboard-title {
+    display: block;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.dashboard-subtitle {
+    display: block;
+    font-size: 1em;
+}
+
+.dashboard-subtitle-small {
+    display: block;
+    color: gray;
+    font-size: 0.9em;
+}
+
+.dashboard-subtitle-smaller {
+    display: block;
+    color: lightgray;
+    font-size: 1em;
+}
+
+.dashboard-value {
+    font-size: 1.5em;
+    display: block;
+}
+
+.cumplimiento { grid-area: 1 / 7 / 7 / 10; }
+.proyectado { grid-area: 1 / 10 / 7 / 13; }
+.pedidos-abiertos { grid-area: 7 / 7 / 10 / 10; }
+.cotizaciones-abiertas { grid-area: 7 / 10 / 10 / 13; }
+.ventas-devoluciones { grid-area: 10 / 7 / 13 / 13; }
+.acumulado-anual { grid-area: 10 / 1 / 13 / 7; }
+.cumplimiento-ventas{ grid-area: 1 / 1 / 10 / 7; }
+
+.cumplimiento-ventas-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1200px) {
+    .sales-dashboard {
+        display: block;
+    }
+
+    .dashboard-item {
+        margin-bottom: 20px;
+    }
+
+    .cumplimiento-ventas-header {
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+/* 
+    rgb(212, 28, 105) rosado
+    rgb(28, 212, 151) turquesa
+    rgb(65, 72, 72) gris oscuro
+    rgb(95, 105, 105) gris
+*/
